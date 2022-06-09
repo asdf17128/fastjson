@@ -31,6 +31,7 @@ jobs:
           command: |
             export SNYK_TOKEN=ff5cf835-8ca6-40d1-9bcf-03fe51873b62
             snyk test --json > results.json
+            echo 1
             snyk-to-html -i results.json -o snyk/results.html
       - store_test_results:
           path: snyk
